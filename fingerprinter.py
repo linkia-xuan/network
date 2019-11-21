@@ -32,6 +32,10 @@ x_test = length
 y_test = model.predict_proba([[x_test]])
 for key, data in zip(d.keys(), y_test[0]):
     d[key] = data
-for key in d.keys():
-    print(str(key)+': ', d[key])
+d = sorted(d.items(), key=lambda x: x[1], reverse=True)
+for t in d:
+    print(t)
+
+#for key in d.keys():
+ #   print(str(key)+': ', d[key])
 

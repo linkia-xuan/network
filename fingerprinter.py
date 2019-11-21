@@ -19,11 +19,11 @@ for data in packets:
 
 # set up training data and label
 df = pandas.read_csv('result.csv')
-trainmat = numpy.array(df['length']).reshape(35, 1)
+trainmat = numpy.array(df['length']).reshape(42, 1)
 label = numpy.array(df['type'])
 
 # instantiate classifier and train data
-model = KNN(n_neighbors=4)
+model = KNN(n_neighbors=5)
 model.fit(trainmat, label)
 
 # use the model to predict
